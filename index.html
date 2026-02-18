@@ -8,8 +8,9 @@
 <!-- Main CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Font Awesome Icons -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 <!-- ================= NAVIGATION ================= -->
 <nav class="navbar">
     <div class="logo">
-        <img src="logo.jpg" alt="Sky Light Logo">
+        <img src="images/logo.jpg" alt="Sky Light Logo">
     </div>
 
     <ul class="nav-links" id="navLinks">
@@ -34,7 +35,7 @@
     </div>
 </nav>
 
-<!-- ================= HERO SECTION ================= -->
+<!-- ================= HERO ================= -->
 <header class="hero">
     <div class="hero-content">
         <h1>Sky Light Chess Club</h1>
@@ -47,16 +48,16 @@
 <section id="about">
     <h2>About Us</h2>
     <div class="about-container">
-        <img src="chess.jpeg" alt="Chess Training">
+        <img src="chess.jpeg" alt="Chess Training" loading="lazy">
         <p>
-            Sky Light Community is dedicated to nurturing strategic thinkers
+            Sky Light Chess Club is dedicated to nurturing strategic thinkers
             through chess coaching, tournaments, and leadership programs.
             We build discipline, creativity, and confidence in learners of all ages.
         </p>
     </div>
 </section>
 
-<!-- ================= VISION & MISSION ================= -->
+<!-- ================= VISION ================= -->
 <section id="vision">
     <h2>Vision & Mission</h2>
 
@@ -86,40 +87,40 @@
     <div class="card-container">
 
         <div class="card">
-            <img src="chessschool.jpg" alt="Chess in Schools">
+            <img src="chessschool.jpg" alt="Chess in Schools" loading="lazy">
             <h3>Chess in Schools</h3>
         </div>
 
         <div class="card">
-            <img src="tournaments.jpg" alt="Tournaments">
+            <img src="tournaments.jpg" alt="Tournaments" loading="lazy">
             <h3>Tournaments</h3>
         </div>
 
         <div class="card">
-            <img src="online.jpg" alt="Online Gaming">
+            <img src="online.jpg" alt="Online Gaming" loading="lazy">
             <h3>Online Gaming</h3>
         </div>
 
         <div class="card">
-            <img src="sunday.jpg" alt="Sunday Training">
+            <img src="sunday.jpg" alt="Sunday Training" loading="lazy">
             <h3>Sunday Training</h3>
             <p>2:00 PM – 6:00 PM</p>
         </div>
 
         <div class="card">
-            <img src="chesshome.jpeg" alt="Home Schooling">
+            <img src="chesshome.jpeg" alt="Home Schooling" loading="lazy">
             <h3>Home Schooling</h3>
         </div>
 
         <div class="card">
-            <img src="training.jpg" alt="Professional Training">
+            <img src="training.jpg" alt="Professional Training" loading="lazy">
             <h3>Professional Trainings</h3>
         </div>
 
     </div>
 </section>
 
-<!-- ================= COMMUNITY PROGRAM ================= -->
+<!-- ================= COMMUNITY ================= -->
 <section id="community">
     <h2>Community Program Update ♟️</h2>
 
@@ -128,8 +129,8 @@
         <div class="card">
             <h3>Sunday Free Training</h3>
             <p>
-                Every Sunday at Southfield Mall, we give back to the community
-                by offering <strong>FREE chess training sessions</strong>.
+                Every Sunday at Southfield Mall, we offer
+                <strong>FREE chess training sessions</strong>.
             </p>
         </div>
 
@@ -147,14 +148,6 @@
         </div>
 
     </div>
-
-    <p class="community-note">
-        We welcome children, youth, and adults to join and grow their chess skills with us.
-    </p>
-
-    <p class="community-highlight">
-        Sky Light Chess Club – Building Minds. Creating Champions. ♟️✨
-    </p>
 </section>
 
 <!-- ================= TEAM ================= -->
@@ -201,7 +194,7 @@
 </footer>
 
 <!-- ================= FLOATING BUTTONS ================= -->
-<a href="https://wa.me/254110550352" class="whatsapp" target="_blank">
+<a href="https://wa.me/254110550352" class="whatsapp" target="_blank" rel="noopener">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -209,8 +202,28 @@
     <i class="fas fa-phone"></i>
 </a>
 
-<!-- ================= JAVASCRIPT ================= -->
-<script src="script.js"></script>
+<a href="https://www.facebook.com/profile.php?id=100067987269156" class="facebook" target="_blank" rel="noopener">
+    <i class="fab fa-facebook-f"></i>
+</a>
 
-</body>
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+}
+
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function showMessage() {
+    alert("Thank you! Your message has been sent.");
+    return false;
+}
+</script>
+
+</body>  
 </html>
