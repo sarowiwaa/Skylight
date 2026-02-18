@@ -89,7 +89,7 @@ body {
 .hero {
     min-height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5");
+                url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -237,28 +237,45 @@ footer {
     text-align: center;
 }
 
-/* ================= FLOATING BUTTONS ================= */
-.whatsapp,
-.phone,
-.facebook {
+/* ================= FLOATING BUTTONS - BOTTOM CENTER ================= */
+.floating-buttons {
     position: fixed;
-    right: 20px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 55px;
-    font-size: 22px;
-    color: white;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px; /* space between buttons */
     z-index: 1000;
-    animation: pulse 2.5s infinite;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
 }
 
-.whatsapp { bottom: 20px; background: #25D366; }
-.phone { bottom: 95px; background: #003566; }
-.facebook { bottom: 170px; background: #1877f2; }
+.floating-buttons a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: white;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: transform 0.2s;
+}
 
+.floating-buttons a:hover {
+    transform: scale(1.15);
+}
+
+/* COLORS */
+.floating-buttons .whatsapp { background: #25D366; }
+.floating-buttons .phone { background: #003566; }
+.floating-buttons .facebook { background: #1877f2; }
+.floating-buttons .youtube { background: #FF0000; }
+.floating-buttons .tiktok { background: #010101; }
+.floating-buttons .instagram { 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* ================= ANIMATION ================= */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.12); }
@@ -284,7 +301,6 @@ footer {
         cursor: pointer;
     }
 
-    /* MOBILE MENU FIX */
     .nav-links {
         position: absolute;
         top: 65px;
@@ -293,15 +309,15 @@ footer {
         flex-direction: column;
         background: rgba(0, 29, 61, 0.98);
         border-radius: 0 0 15px 15px;
-        overflow: hidden;          /* hide content until active */
-        max-height: 0;             /* fully closed by default */
+        overflow: hidden;          
+        max-height: 0;             
         transition: max-height 0.5s ease; 
         text-align: center;
         z-index: 999;
     }
 
     .nav-links.active {
-        max-height: 500px;         /* enough for menu items */
+        max-height: 500px;         
     }
 
     .nav-links li {
@@ -313,7 +329,6 @@ footer {
         display: block;
     }
 
-    /* HERO */
     .hero {
         min-height: 80vh;
         padding: 40px 20px;
@@ -333,7 +348,6 @@ footer {
         font-size: 14px;
     }
 
-    /* SECTIONS */
     section {
         padding: 60px 20px;
     }
@@ -343,7 +357,6 @@ footer {
         margin-bottom: 30px;
     }
 
-    /* ABOUT */
     .about-container {
         flex-direction: column;
         gap: 30px;
@@ -355,7 +368,6 @@ footer {
         max-width: 300px;
     }
 
-    /* CARDS */
     .card-container {
         flex-direction: column;
         align-items: center;
@@ -367,25 +379,23 @@ footer {
         max-width: 350px;
     }
 
-    /* FORM */
     form input,
     form textarea {
         width: 95%;
         max-width: 400px;
     }
 
-    /* FLOATING BUTTONS */
-    .whatsapp,
-    .phone,
-    .facebook {
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        font-size: 16px;
-        right: 15px;
+    .floating-buttons {
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 8px;
     }
 
-    .whatsapp { bottom: 15px; }
-    .phone { bottom: 70px; }
-    .facebook { bottom: 125px; }
+    .floating-buttons a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
 }
